@@ -8,6 +8,8 @@ Refer to Getting started:  https://github.com/GoogleCloudPlatform/cloud-function
 functions deploy uuid --trigger-http
 
 # usage
+<code>
 functions call uuid --data '{"ver":"v1"
 functions call uuid --data '{"ver":"v3", "dns": "hello.example.com"}'
 functions call uuid --data '{"ver":"v3", "url": "http://example.com/hello"}'
+</code>
