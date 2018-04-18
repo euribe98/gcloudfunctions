@@ -11,7 +11,7 @@ var uuidv5 = require('uuid/v5'); //Version 5 (namespace):
 
 /**
  * Returns uuid
- * Use: functions call --data { json }
+ * Use: functions call uuid --data { json }
  * json body:  
  * 	'{"ver":"v1"}'
  *  '{"ver":"v4"}'
@@ -43,25 +43,25 @@ exports.uuid = (req, res) => {
 		else if (ver == 'v3') {
 			res.setHeader('Content-Type', 'application/json');
 			if (dns != undefined) {
-				console("uuid v3 with dns");
+				console.log("uuid v3 with dns");
 				res.status(200).json ({"uuid": uuidv3(dns, uuidv3.DNS) });
 			}else if (url != undefined) {
-				console("uuid v3 with url");
+				console.log("uuid v3 with url");
 				res.status(200).json ({"uuid": uuidv3(url, uuidv3.URL) });
 			}else if (custom != undefined) {
-				console("uuid v3 with custom");
+				console.log("uuid v3 with custom");
 				res.status(200).json ({"uuid": uuidv3(custom, uuidv4()) });
 			}	
 		}
 		else if (ver == 'v5') {
 			if (dns !=  undefined) {
-				console("uuid v5 with dns");
+				console.log("uuid v5 with dns");
 				res.status(200).json ({"uuid": uuidv5(dns, uuidv5.DNS) });
 			}else if (url != undefined) {
-				console("uuid v5 with url");
+				console.log("uuid v5 with url");
 				res.status(200).json ({"uuid": uuidv5(url, uuidv5.URL) });
 			}else if (custom != undefined) {
-				console("uuid v5 with custom");
+				console.log("uuid v5 with custom");
 				res.status(200).json ({"uuid": uuidv5(custom, uuidv4()) });
 			}		
 		}
