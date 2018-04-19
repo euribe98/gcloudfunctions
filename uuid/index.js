@@ -34,35 +34,35 @@ exports.uuid = (req, res) => {
 		
 		if (ver == 'v1') {
 			res.setHeader('Content-Type', 'application/json');
-			res.status(200).json ({"uuid": uuidv1()});
+			res.status(200).json ({"ver":"v1","uuid": uuidv1()});
 		}
 		else if (ver == 'v4') {
 			res.setHeader('Content-Type', 'application/json');
-			res.status(200).json ({"uuid":  uuidv4()});
+			res.status(200).json ({"ver":"v4","uuid":  uuidv4()});
 		}
 		else if (ver == 'v3') {
 			res.setHeader('Content-Type', 'application/json');
 			if (dns != undefined) {
 				console.log("uuid v3 with dns");
-				res.status(200).json ({"uuid": uuidv3(dns, uuidv3.DNS) });
+				res.status(200).json ({"ver":"v3","uuid": uuidv3(dns, uuidv3.DNS) });
 			}else if (url != undefined) {
 				console.log("uuid v3 with url");
-				res.status(200).json ({"uuid": uuidv3(url, uuidv3.URL) });
+				res.status(200).json ({"ver":"v3","uuid": uuidv3(url, uuidv3.URL) });
 			}else if (custom != undefined) {
 				console.log("uuid v3 with custom");
-				res.status(200).json ({"uuid": uuidv3(custom, uuidv4()) });
+				res.status(200).json ({"ver":"v3","uuid": uuidv3(custom, uuidv4()) });
 			}	
 		}
 		else if (ver == 'v5') {
 			if (dns !=  undefined) {
 				console.log("uuid v5 with dns");
-				res.status(200).json ({"uuid": uuidv5(dns, uuidv5.DNS) });
+				res.status(200).json ({"ver":"v5","uuid": uuidv5(dns, uuidv5.DNS) });
 			}else if (url != undefined) {
 				console.log("uuid v5 with url");
-				res.status(200).json ({"uuid": uuidv5(url, uuidv5.URL) });
+				res.status(200).json ({"ver":"v5","uuid": uuidv5(url, uuidv5.URL) });
 			}else if (custom != undefined) {
 				console.log("uuid v5 with custom");
-				res.status(200).json ({"uuid": uuidv5(custom, uuidv4()) });
+				res.status(200).json ({"ver":"v5","uuid": uuidv5(custom, uuidv4()) });
 			}		
 		}
 		else {
