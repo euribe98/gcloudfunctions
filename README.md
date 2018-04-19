@@ -27,3 +27,9 @@ functions deploy [function name] --trigger-http
  functions call [funcion name]
 </pre>
 
+# logs
+<pre>
+  functions logs read
+  functions logs read --limit=10 from logs
+</pre>
+
