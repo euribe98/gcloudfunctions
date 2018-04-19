@@ -22,3 +22,8 @@ More info:  https://github.com/GoogleCloudPlatform/cloud-functions-emulator/
 functions deploy [function name] --trigger-http
 </pre>
 
+# usage
+<pre>
+ functions call [funcion name]
+</pre>
+
