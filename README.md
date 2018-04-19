@@ -19,6 +19,6 @@ More info:  https://github.com/GoogleCloudPlatform/cloud-functions-emulator/
 
 # deploy
 <pre>
-functions deploy <function name> --trigger-http
+functions deploy [function name] --trigger-http
 </pre>
 
