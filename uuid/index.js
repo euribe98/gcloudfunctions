@@ -1,6 +1,6 @@
 /**
  * uuid functions
- * https://www.npmjs.com/package/uuid
+ * uses: https://www.npmjs.com/package/uuid
  */
 
 var uuidv1 = require('uuid/v1');
