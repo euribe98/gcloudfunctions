@@ -27,5 +27,5 @@ functions call uuid --data '{"ver":"v3", "url": "http://example.com/hello"}'
 # response
 <pre>
 ExecutionId: 39b8741a-9fca-4ca2-a6e6-bdfafe8dd4ef
-Result: { uuid: '1c271850-437c-11e8-8d21-4b5813e40e62' }
+Result:  { ver: 'v1', uuid: 'd5c010a0-437c-11e8-ad54-09f64e421d9e' }
 </pre>
