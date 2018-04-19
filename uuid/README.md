@@ -1,4 +1,4 @@
-# gcloudfunctions
+# uuid
 functions for returning a UUID
 
 # setup
