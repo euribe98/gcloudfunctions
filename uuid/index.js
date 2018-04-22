@@ -54,7 +54,8 @@ exports.uuid = (req, res) => {
 			}	
 		}
 		else if (ver == 'v5') {
-			if (dns !=  undefined) {
+			res.setHeader('Content-Type', 'application/json');
+            if (dns !=  undefined) {
 				console.log("uuid v5 with dns");
 				res.status(200).json ({"ver":"v5","uuid": uuidv5(dns, uuidv5.DNS) });
 			}else if (url != undefined) {
