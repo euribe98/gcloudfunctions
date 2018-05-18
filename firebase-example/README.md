@@ -5,6 +5,7 @@ An example of exporting an express application to cloud functions
 
 
 ## Usage
+ <pre>
  install dependencies
  	npm install
  	
@@ -18,5 +19,6 @@ An example of exporting an express application to cloud functions
 
 
 ## Developing
+</pre>
 
 
