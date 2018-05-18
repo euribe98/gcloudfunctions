@@ -1,3 +1,5 @@
+# Example of deploying an Express App with Google Cloud Functions
+
 # install dependencies
 cd ~/temp-converter
 npm install
@@ -19,10 +21,10 @@ Open the following url in your browser:
 
 # test api
 <pre>
-	http://localhost:8081/api/conversions/to-fahrenheit/100
+	curl -X GET -i http://localhost:8081/api/conversions/to-fahrenheit/100
 	response:
 		{"valueToConvert":100,"convertedValue":212}
-	http://localhost:8081/api/conversions/to-celsius/32
+	curl -X GET -i http://localhost:8081/api/conversions/to-celsius/32
 	response:
 		{"valueToConvert":32,"convertedValue":0}
 </pre>
@@ -30,11 +32,12 @@ Open the following url in your browser:
 # deploy and test cloud functions 
 <pre>
 	deploy:
-		 functions deploy converter --trigger-http
-		 functions deploy tofahrenheit --trigger-http
+		 functions deploy tempApp --trigger-http
 	curl:
-		curl -X POST http://localhost:8010/gcloudfunctions/us-central1/converter 
-		curl -X POST http://localhost:8010/gcloudfunctions/us-central1/tofahrenheit?temp=100
+		curl -X POST http://localhost:8010/gcloudfunctions/us-central1/tempApp 
+		curl -X POST http://localhost:8010/gcloudfunctions/us-central1/tempApp/api/conversions/to-celsius/32
+		curl -X POST http://localhost:8010/gcloudfunctions/us-central1/tempApp/api/conversions/to-fahrenheit/100
+		
 	emulator:	
 		functions call converter
 		
