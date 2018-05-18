@@ -27,7 +27,7 @@ Open the following url in your browser:
 		{"valueToConvert":32,"convertedValue":0}
 </pre>
 
-# deploy and test cloud functions
+# deploy and test cloud functions 
 <pre>
 	deploy:
 		 functions deploy converter --trigger-http
