@@ -7,11 +7,12 @@ function App(req,res) {
     }
     return app(req,res);
 }
-var converter = App;
+var tempApp = App;  //express app
 
-var request = require('request');
+//var request = require('request');
 
 //convert to fahrenheit using 'request' library
+/*
 function Fahrenheit (req, resp) {	
 	let temp = req.query.temp;
 	
@@ -29,7 +30,7 @@ function Fahrenheit (req, resp) {
 		});
 	}
 }
-
+*/
 
 //convert to fahrenheit using 'simple-get' library
 /*
@@ -60,10 +61,10 @@ function Fahrenheit (req, resp) {
 	}
 }*/
 
-var tofahrenheit = Fahrenheit;
+//var tofahrenheit = Fahrenheit;
 
 /* export cloud functions */
 module.exports = {
-	converter,
-	tofahrenheit
+	tempApp
+	//,tofahrenheit
 }
